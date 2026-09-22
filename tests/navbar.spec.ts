@@ -14,7 +14,7 @@ test.describe('Test Navbar from Home Page', () => {
     });
   });
   test('should navigate to github repository', async ({ homePage: _homePage, navbar }) => {
-    let newTabPromise: Promise<Page>;
+    let newTabPromise!: Promise<Page>;
 
     await test.step('wait for the new tab', async () => {
       newTabPromise = navbar.page.context().waitForEvent('page');
