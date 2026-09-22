@@ -3,13 +3,19 @@ import { test, expect } from './fixtures';
 test.describe('Home Page', () => {
   test.describe('Hero section', () => {
     test('should display the title', async ({ homePage }) => {
-      await expect(homePage.heroHeading).toBeVisible();
+      await test.step('hero title is visible', async () => {
+        await expect(homePage.heroHeading).toBeVisible();
+      });
     });
     test('should display the sub title', async ({ homePage }) => {
-      await expect(homePage.subTitle1).toBeVisible();
+      await test.step('hero subtitle is visible', async () => {
+        await expect(homePage.subTitle1).toBeVisible();
+      });
     });
     test('should display the sub title 2', async ({ homePage }) => {
-      await expect(homePage.subTitle2).toBeVisible();
+      await test.step('hero second subtitle is visible', async () => {
+        await expect(homePage.subTitle2).toBeVisible();
+      });
     });
   });
   test.describe('Features Cards', () => {
